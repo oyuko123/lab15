@@ -21,9 +21,14 @@ public class CalculatorTest {
     @Test
     public void testDivide() {
         assertEquals(2, calculator.divide(6, 3));
-        
         assertEquals(5, calculator.divide(5, 1));
-        
         assertThrows(ArithmeticException.class, () -> calculator.divide(5, 0));
+    }
+
+    @Test
+    public void testMultiply() {
+        assertEquals(6, calculator.multiply(2, 3));
+        assertEquals(0, calculator.multiply(0, 5));
+        assertEquals(-6, calculator.multiply(-2, 3));
     }
 }
